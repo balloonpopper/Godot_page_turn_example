@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node"]
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 66.0
+margin_top = 46.0
+margin_right = 612.0
+margin_bottom = 656.0
+bbcode_text = "Choose 2D or 3D example
+
+When in the demo, use the following keys : 
+Left and Right cursor to change pages
+ESC to quit
+
+The 2D Demo uses mesh deformations to simulate turning pages. You will notice that the page content \"bends\" as the page turns due to the way Godot has stored the page polygon as 2 triangles. I haven't worked out a way to get it to deform the polygon as a square, regardless of the number of points used on the polygon.
+
+Both the 2D and 3D Demos run an \"idle\" animation at on _ready to ensure that the animations are reset and the book starts at the front with the cover closed.
+
+Setting your own graphics
+The 3D demo uses CSG meshes for each of the 6 pages (ie. 3 pages, front and back). 3 pages are required to be loaded as when a page is being turned you'll also be able to see the previous and next pages.
+
+The graphics used are 480x640 for each page as I found this worked well with a 1080p resolution. If you want to change this you'll need to change the polygons/UV (2D scene) or CSGMeshes (3D scene) accordingly. You'll also need to update the animation frames for each animation frame for the polygons/translations as necessary.
+
+For both demos, the contents of the pages are loaded dynamically from image files as the pages are turned. To put your own page contents, add images called \"pageX.png\" (where X is a sequential number) into the appropriate directory and set the total number of pages at the top of the script. 
+
+Page Turning Speed
+The turning speed variable in the example scenes is a ratio. 0.5 is half the current speed, 2 is double the current speed."
+text = "Choose 2D or 3D example
+
+When in the demo, use the following keys : 
+Left and Right cursor to change pages
+ESC to quit
+
+The 2D Demo uses mesh deformations to simulate turning pages. You will notice that the page content \"bends\" as the page turns due to the way Godot has stored the page polygon as 2 triangles. I haven't worked out a way to get it to deform the polygon as a square, regardless of the number of points used on the polygon.
+
+Both the 2D and 3D Demos run an \"idle\" animation at on _ready to ensure that the animations are reset and the book starts at the front with the cover closed.
+
+Setting your own graphics
+The 3D demo uses CSG meshes for each of the 6 pages (ie. 3 pages, front and back). 3 pages are required to be loaded as when a page is being turned you'll also be able to see the previous and next pages.
+
+The graphics used are 480x640 for each page as I found this worked well with a 1080p resolution. If you want to change this you'll need to change the polygons/UV (2D scene) or CSGMeshes (3D scene) accordingly. You'll also need to update the animation frames for each animation frame for the polygons/translations as necessary.
+
+For both demos, the contents of the pages are loaded dynamically from image files as the pages are turned. To put your own page contents, add images called \"pageX.png\" (where X is a sequential number) into the appropriate directory and set the total number of pages at the top of the script. 
+
+Page Turning Speed
+The turning speed variable in the example scenes is a ratio. 0.5 is half the current speed, 2 is double the current speed."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 122.861
+margin_top = 584.34
+margin_right = 237.861
+margin_bottom = 604.34
+text = "2D Scene Demo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 334.122
+margin_top = 582.841
+margin_right = 450.122
+margin_bottom = 602.841
+text = "3D Scene Demo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed_2d"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button_pressed_3d"]

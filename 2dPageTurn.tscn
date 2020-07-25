@@ -1,0 +1,301 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/PageTurnTest.gd" type="Script" id=1]
+[ext_resource path="res://2DImages/PageTurnTest/page3.png" type="Texture" id=2]
+[ext_resource path="res://2DImages/PageTurnTest/page4.png" type="Texture" id=3]
+[ext_resource path="res://2DImages/PageTurnTest/page2.png" type="Texture" id=4]
+[ext_resource path="res://2DImages/PageTurnTest/page1.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Page1:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 480, 220, 480, 880, 960, 880, 960, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Page1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Page2:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Page2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Page3:polygon")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 12.3972, 165.216, 12.5668, 797.139, 26.0444, 803.427, 25.8749, 171.503 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Page3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Page4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Page4:polygon")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Page2:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 ), PoolVector2Array( 960, 220, 960, 880, 960, 960, 960, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Page2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Page3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Page3:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 960, 120, 960, 980, 960, 880, 960, 220 ), PoolVector2Array( 480, 220, 480, 880, 960, 880, 960, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Page3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Page2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Page3:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 480, 220, 480, 880, 960, 880, 960, 220 ), PoolVector2Array( 960, 120, 960, 980, 960, 880, 960, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Page3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Page2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Page2:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ PoolVector2Array( 960, 220, 960, 880, 960, 960, 960, 120 ), PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Page2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Page3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="PageTurn" type="Node2D"]
+script = ExtResource( 1 )
+PageSpeedRatio = 2.0
+
+[node name="Page1" type="Polygon2D" parent="."]
+texture = ExtResource( 5 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 480, 220, 480, 880, 960, 880, 960, 220 )
+uv = PoolVector2Array( 0, 0, 0, 640, 480, 640, 480, 0 )
+bones = [ NodePath("Bone2DLeft"), PoolRealArray( 1, 1, 1, 1 ), NodePath("Bone2DRight"), PoolRealArray( 0, 0, 0, 0 ) ]
+
+[node name="Page2" type="Polygon2D" parent="."]
+z_index = 5
+texture = ExtResource( 4 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 )
+uv = PoolVector2Array( 0, 0, 0, 640, 480, 640, 480, 0 )
+bones = [ NodePath("Bone2DLeft"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Bone2DRight"), PoolRealArray( 1, 1, 1, 1 ) ]
+
+[node name="Page3" type="Polygon2D" parent="."]
+visible = false
+z_index = 5
+texture = ExtResource( 2 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 12.3972, 165.216, 12.5668, 797.139, 26.0444, 803.427, 25.8749, 171.503 )
+uv = PoolVector2Array( 0, 0, 0, 640, 480, 640, 480, 0 )
+bones = [ NodePath("Bone2DLeft"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Bone2DRight"), PoolRealArray( 1, 1, 1, 1 ) ]
+
+[node name="Page4" type="Polygon2D" parent="."]
+texture = ExtResource( 3 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 960, 220, 960, 880, 1440, 880, 1440, 220 )
+uv = PoolVector2Array( 0, 0, 0, 640, 480, 640, 480, 0 )
+bones = [ NodePath("Bone2DLeft"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Bone2DRight"), PoolRealArray( 1, 1, 1, 1 ) ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 1 )
+anims/TurnPageNextA = SubResource( 3 )
+anims/TurnPageNextB = SubResource( 4 )
+anims/TurnPagePreviousA = SubResource( 5 )
+anims/TurnPagePreviousB = SubResource( 6 )
